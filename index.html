@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="res/style.css">
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+
+<body class="m-0 p-0 bg-white">
+    <div class="carousel block relative overflow-hidden" style="height: 500px;">
+        <div class="carouel-item">
+            <input type="radio" name="carousel" id="carousel-1" hidden checked="true" class="hidden w-0 h-0">
+            <img src="res/slider (1).jpg" alt=""
+                class="duration-700 absolute block w-full opacity-0 max-w-full transition-opacity">
+        </div>
+
+        <div class="carouel-item">
+            <input type="radio" name="carousel" id="carousel-2" hidden class="hidden w-0 h-0">
+            <img src="res/slider (2).jpg" alt=""
+                class="duration-700 absolute max-w-full w-full block opacity-0 transition-opacity">
+        </div>
+
+        <div class="carouel-item">
+            <input type="radio" name="carousel" id="carousel-3" hidden class="hidden w-0 h-0">
+            <img src="res/road-landscape-nature-forest-39811.jpg" alt=""
+                class="duration-700 absolute max-w-full block  w-full opacity-0 transition-opacity">
+        </div>
+        <div class="labels absolute w-full text-center" style="bottom: 20px;">
+            <label class="inline-block m-2 cursor-pointer bg-gray-400 opacity-75" for="carousel-1"></label>
+            <label class="inline-block m-2 cursor-pointer bg-gray-400 opacity-75" for="carousel-2"></label>
+            <label class="inline-block m-2 cursor-pointer bg-gray-400 opacity-75" for="carousel-3"></label>
+        </div>
+    </div>
+
+    <h1 class=" text-center text-2xl font-semibold bg-gray-300 p-10 leading-10">Horizontzal Scroll Bar</h1>
+
+    <div class="scroller images">
+        <div class="scroller-inner">
+            <div class="scroller-item">
+                <img src="res/slider (1).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/slider (2).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/workshop-4863393_1920.jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/slider (1).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/slider (2).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/workshop-4863393_1920.jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/slider (1).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/slider (2).jpg" alt="">
+            </div>
+            <div class="scroller-item">
+                <img src="res/workshop-4863393_1920.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="scroller overflow-auto whitespace-no-wrap h-auto my-16">
+        <div class="scroller-inner">
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                            commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                    <div class="p-4 h-auto md:h- lg:h-64">
+                        <a href="#"
+                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                            Woman standing under blue sky
+                        </a>
+                        <div
+                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                            asperiores?
+                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
+                            quisquam
+                            debitis!
+                        </div>
+                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#something</a>
+                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                href="#">#sky</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>
