@@ -24,7 +24,7 @@
                 </svg>
             </button>
         </div>
-        <div id="main-nav" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+        <div id="main-nav" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden">
             <div class="text-sm lg:flex-grow">
                 <a href="#responsive-header"
                     class="block mt-4 font-semibold lg:inline-block lg:mt-0 text-white hover:text-white mr-4">
@@ -62,7 +62,7 @@
             </div>
         </div>
     </nav>
-    <div class="carousel block relative overflow-hidden" style="height: 500px;">
+    <div class="carousel block relative overflow-hidden lg:h-auto" style="height: 500px;">
         <div class="carouel-item">
             <input type="radio" name="carousel" id="carousel-1" hidden checked="true" class="hidden w-0 h-0">
             <img src="res/slider (1).jpg" alt=""
@@ -87,247 +87,281 @@
         </div>
     </div>
 
-    <h1 class=" text-center text-2xl font-semibold bg-gray-300 p-10 leading-10">Horizontzal Scroll Bar</h1>
+    <h1 class=" text-center lg:text-2xl font-semibold bg-gray-300 lg:p-4 leading-10">Horizontzal Scroll Bar</h1>
 
-    <div class="scroller images">
+    <div class="scroller h-auto overflow-auto whitespace-no-wrap">
         <div class="scroller-inner">
-            <div class="scroller-item">
-                <img src="res/slider (1).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (1).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/slider (2).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (2).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/workshop-4863393_1920.jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/workshop-4863393_1920.jpg" style="max-width: 400px;height: 234px;" alt="">
             </div>
-            <div class="scroller-item">
-                <img src="res/slider (1).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (1).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/slider (2).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (2).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/workshop-4863393_1920.jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/workshop-4863393_1920.jpg" style="max-width: 400px;height: 234px;" alt="">
             </div>
-            <div class="scroller-item">
-                <img src="res/slider (1).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (1).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/slider (2).jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/slider (2).jpg" alt="" style="max-width: 400px;height: 234px;">
             </div>
-            <div class="scroller-item">
-                <img src="res/workshop-4863393_1920.jpg" alt="">
+            <div class="inline-block" style="padding: 10px;">
+                <img src="res/workshop-4863393_1920.jpg" style="max-width: 400px;height: 234px;" alt="">
             </div>
         </div>
     </div>
 
-    <div class="scroller overflow-auto whitespace-no-wrap h-auto mt-16">
-        <div class="scroller-inner">
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
-                            commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+    <div class="flex flex-row-reverse relative">
+
+        <!-- Filter SideBar -->
+        <button class="text-2xl ml-5 border-2 border-blue-400" onclick="nav()" id="openFilter">Open Filters</button>
+
+        <div class="side-nvabar float-left bg-blue-200 max-h-full w-auto" id="mySidenav">
+            <div class="container w-64 p-10">
+                <div class="flex flex-col">
+                    <div class="flex-initial">
+                        <button onclick="nav()">☰</button>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Hello</label>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">About Us</label>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Portfolio</label>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Reach Us</label>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Clients</label>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="scroller overflow-auto whitespace-no-wrap h-auto mt-16">
+            <div class="scroller-inner">
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="scroller-item inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
-                <div class="bg-white rounded-lg overflow-hidden shadow relative">
-                    <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
-                    <div class="p-4 h-auto md:h- lg:h-64">
-                        <a href="#"
-                            class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
-                            Yellow moon under the Black sky.
-                        </a>
-                        <div
-                            class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
-                            asperiores?
-                            Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id commodi
-                            quisquam
-                            debitis!
-                        </div>
-                        <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#something</a>
-                            <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
-                                href="#">#sky</a>
+                <div class="inline-block inline-block w-full lg:w-3/12 md:mx-2 mb-4 md:mb-0 sm:w-4/12">
+                    <div class="bg-white rounded-lg overflow-hidden shadow relative">
+                        <img class="h-56 w-full object-cover object-center" src="res/moonlight-4781350.jpg" alt="">
+                        <div class="p-4 h-auto md:h-64 lg:h-64">
+                            <a href="#"
+                                class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+                                Yellow moon under the Black sky.
+                            </a>
+                            <div
+                                class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm whitespace-normal">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo quidem blanditiis unde
+                                asperiores?
+                                Officia amet perspiciatis ad quibusdam incidunt eaque, nobis, eveniet neque porro id
+                                commodi
+                                quisquam
+                                debitis!
+                            </div>
+                            <div class="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#something</a>
+                                <a class="inline bg-gray-300 py-1 px-2 rounded-full text-xs lowercase text-gray-700"
+                                    href="#">#sky</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 
     <footer>
-        <div class=" max-w-full h-32 bg-gray-200">
+        <div class=" max-w-full h-auto bg-gray-200">
             <div id="footer-inner" class="py-10">
-                <!-- <div class="inline-block mx-10 mb-5">
-                    <a href="#">About Us</a>
-                </div>
-                <div class="inline-block mx-10 mb-5">
-                    <a href="#">About Us</a>
-                </div> -->
                 <div class="container text-center max-w-full mb-4">
-                    <a href="facebook.com" class="mx-1 p-2 rounded text-white bg-blue-700">facebook</a>
-                    <a href="twitter.com" class="mx-1 bg-blue-400 p-2 rounded text-white">twitter</a>
-                    <a href="github.com" class="mx-1 bg-gray-700 p-2 rounded text-white">Github</a>
+                    <a href="facebook.com"
+                        class="mx-1 p-2 rounded text-white bg-blue-800 hover:bg-blue-900">facebook</a>
+                    <a href="twitter.com" class="mx-1 bg-blue-400 p-2 rounded text-white hover:bg-blue-700">twitter</a>
+                    <a href="github.com" class="mx-1 bg-gray-700 p-2 rounded text-white hover:bg-gray-800">Github</a>
                 </div>
                 <div class="container text-center max-w-full">
                     <div class="copyright">
                         &copy; Copyright <strong>Code & Colors</strong>. All Rights Reserved
                     </div>
                     <div class="credits">
-                        Designed by <a href="https://codencolors.com/" target="_blank">Code & Colors</a>
+                        Designed by <a href="https://codencolors.com/" target="_blank" class="font-semibold">Code &
+                            Colors</a>
                     </div>
                 </div>
             </div>
@@ -337,6 +371,24 @@
 </body>
 
 <script>
+    const menu = document.querySelector('#mySidenav');
+    const openFilter = document.querySelector('#openFilter');
+
+    menu.hidden = false;
+    openFilter.style.display = "none";
+
+    function nav() {
+        if (!menu.hidden) {
+            menu.hidden = true;
+            openFilter.style.display = "block";
+
+        }
+        else {
+            menu.hidden = false;
+            openFilter.style.display = "none";
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
 
         // Get all "navbar-burger" elements
