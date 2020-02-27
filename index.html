@@ -121,35 +121,71 @@
         </div>
     </div>
 
-    <div class="flex flex-row-reverse" id="products">
+    <div class="flex flex-row" id="products">
 
         <!-- Filter SideBar -->
         <button class="text-2xl ml-5 border-2 border-blue-400" onclick="nav()" id="openFilter">Open Filters</button>
 
-        <div class="side-nvabar float-left bg-blue-200 max-h-full w-auto" id="mySidenav">
-            <div class="container w-64 p-10">
-                <div class="flex flex-col">
-                    <div class="flex-initial">
-                        <button onclick="nav()">☰</button>
+        <div class="side-nvabar float-left bg-gray-100 max-h-full relative" id="mySidenav">
+
+            <div class="container p-10" style="width: 325px;">
+
+                <div class="mb-2">
+                    <button onclick="nav()">☰</button>
+                </div>
+
+                <div class="flex flex-col" id="brands">
+                    <div class="flex-initial my-2">
+                        BRAND
                     </div>
                     <div class="flex-initial">
-                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Hello</label>
+                        <input type="text" placeholder="Search Brands Here" class="p-2">
                     </div>
                     <div class="flex-initial">
-                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">About Us</label>
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Logitech</label>
                     </div>
                     <div class="flex-initial">
-                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Portfolio</label>
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">HP</label>
                     </div>
                     <div class="flex-initial">
-                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Reach Us</label>
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Asus</label>
                     </div>
                     <div class="flex-initial">
-                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Clients</label>
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Dell</label>
+                    </div>
+                    <div class="flex-initial">
+                        <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Astrum</label>
                     </div>
                 </div>
 
+                <div class="bg-gray-400 lg:mt-4" style="width: auto;height: 1px;"></div>
+
+                <div id="offers" class="mt-4">
+                    <div class="flex flex-col">
+                        <div class="flex-initial">
+                            OFFRES
+                        </div>
+                        <div class="flex-initial">
+                            <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Buy More, Save
+                                More</label>
+                        </div>
+                        <div class="flex-initial">
+                            <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Exchange
+                                offers</label>
+                        </div>
+                        <div class="flex-initial">
+                            <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">No Cost
+                                EMI</label>
+                        </div>
+                        <div class="flex-initial">
+                            <input type="checkbox" name="filter" class="mx-2 my-3"><label for="filter">Special
+                                Price</label>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
         </div>
         <div class="scroller overflow-auto whitespace-no-wrap h-auto mt-16">
             <div class="scroller-inner">
@@ -392,7 +428,7 @@
     }
     var w = $(window).width();
     $(window).resize(function () {
-       
+
         w = $(window).width();
         if (w <= '576') {
 
